@@ -29,7 +29,7 @@ bot = Client('Doodstream bot',
 async def start(bot, message):
     await message.reply(
         f"**Hola 👋{message.chat.first_name}!**\n\n"
-        "**A Simple PDisk Uploader Bot.\n\n➠ Send Me Any Direct Link, YouTube Link Or Video Link  I Will Upload To PDisk And Give Direct Link\n\nMade With ❤ BY @MoviesFlixers_DL**")
+        "**I am a Simple Mdisk link convertor Bot.\n\n➠ Send Me Any MDisk link, I Will Convert To your Mdisk Link\n\nMade With ❤ BY @hindi_world_series**")
 
 @bot.on_message(filters.text & filters.private)
 async def Doodstream_uploader(bot, message):
@@ -161,9 +161,7 @@ async def remove_username(new_List):
     return new_List
 
 async def addFooter(str):
-    footer = """
-━━━━━━━━━━━━━━━
-✪ »JOIN CHANNEL ➡️ t.me/""" + CHANNEL
+    footer = """ """ + CHANNEL
     return str + footer
 
 bot.run()
