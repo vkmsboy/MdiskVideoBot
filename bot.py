@@ -60,43 +60,6 @@ async def Doodstream_uploader(bot, message):
     except Exception as e:
         await message.reply(f'Error: {e}', quote=True)
 
-
-'''async def get_ptitle(url):
-    if ('bit' in url ):
-      url = urlopen(url).geturl()
-      
-      
-    html_text = requests.get(url).text
-    soup = BeautifulSoup(html_text, 'html.parser')
-    for title in soup.find_all('title'):
-        pass
-    title = list(title.get_text())
-    title = title[8:]
-    str = 't.me/' + CHANNEL + ' '
-    for i in title:
-        str = str + i
-    lst = list(html_text.split(","))
-    c = 0
-    for i in lst:
-        if ("""/e/""" in i):
-            found = lst[c]
-            break
-        c += 1
-
-    # Doodstream.com link
-    Doodstream_video_id = list(found.split(":"))
-    video_id = Doodstream_video_id[2]
-    video_id = list(video_id.split(","))
-    v_id = video_id[0]
-    #v_len = len(v_id)
-    #v_id = v_id[1:v_len - 2]
-
-    v_url = 'https://vidzoop.blogspot.com/p/share-video.html?vid=' + v_id + '&m=1'
-    v_url = url
-    res = [str, v_url]
-    return res'''
-
-
 async def Doodstream_up(link):
     if ('bit' in link ):
         #link = urlopen(link).geturl()
@@ -161,7 +124,7 @@ async def remove_username(new_List):
     return new_List
 
 async def addFooter(str):
-    footer = """ """ + CHANNEL
+    footer = f"{Doodstream_link}" + CHANNEL
     return str + footer
 
 bot.run()
