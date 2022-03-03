@@ -53,7 +53,7 @@ async def Doodstream_uploader(bot, message):
         Doodstream_link = await multi_Doodstream_up(new_string)
         if(len(Doodstream_link) > 1020):
             await bot.delete_messages(chat_id=message.chat.id, message_ids=dele)
-            await message.reply(f'{Doodstream_link}' , quote=True)
+            await message.reply(f'{Doodstream_link} hi' , quote=True)
         else:
             await bot.delete_messages(chat_id=message.chat.id, message_ids=dele)
             await bot.send_photo(message.chat.id, message.photo.file_id, caption=f'**{Doodstream_link}**')
@@ -124,7 +124,7 @@ async def remove_username(new_List):
     return new_List
 
 async def addFooter(str):
-    footer = f"{Doodstream_link}" + CHANNEL
+    footer = f"" + CHANNEL
     return str + footer
 
 bot.run()
