@@ -39,7 +39,7 @@ async def Doodstream_uploader(bot, message):
     try:
         Doodstream_link = await multi_Doodstream_up(new_string)
         await bot.delete_messages(chat_id=message.chat.id, message_ids=dele)
-        await message.reply(f'**{Doodstream_link} h1**' , quote=True)
+        await message.reply(f'**h1 {Doodstream_link}**' , quote=True)
     except Exception as e:
         await message.reply(f'Error: {e}', quote=True)
 
