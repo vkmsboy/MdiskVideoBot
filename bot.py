@@ -124,7 +124,7 @@ async def remove_username(new_List):
     return new_List
 
 async def addFooter(str):
-    footer = f"" + CHANNEL
+    footer = """ """ + CHANNEL
     return str + footer
 
 bot.run()
